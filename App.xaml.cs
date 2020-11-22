@@ -139,7 +139,7 @@ namespace lmi_3
 
     //}
 
-    class Student : INotifyPropertyChanged
+    class Student 
     {
         private string group;
         private string osvit_zakld;

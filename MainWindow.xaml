@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lmi_3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="250" Width="300" Name="mainWindow">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ListBox x:Name="phonesList" />
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 15 0 0" HorizontalAlignment="Center">
+            <TextBox Name="phoneTextBox" Width="190" />
+            <Button Content="Сохранить" MaxWidth="70" Margin="10 0 0 0" Click="Button_Click" Height="20" VerticalAlignment="Top" />
+        </StackPanel>
     </Grid>
 </Window>
