@@ -5,16 +5,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lmi_3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="300" Name="mainWindow">
-    <Grid>
+        Title="MainWindow" Height="500" Width="800" Name="mainWindow">
+    <Grid HorizontalAlignment="Center" Width="800" Margin="0,0,0,-16">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="384*"/>
+            <ColumnDefinition Width="77*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="335*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <ListBox x:Name="phonesList" />
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 15 0 0" HorizontalAlignment="Center">
-            <TextBox Name="phoneTextBox" Width="190" />
-            <Button Content="Сохранить" MaxWidth="70" Margin="10 0 0 0" Click="Button_Click" Height="20" VerticalAlignment="Top" />
-        </StackPanel>
+        <ListBox x:Name="StudentnameList" SelectionChanged="StudentnameList_SelectionChanged" Margin="10,90,307,46" Grid.RowSpan="2" />
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,15,0,0" HorizontalAlignment="Center" Grid.Column="2" Width="0"/>
+        <Label Content="Label" HorizontalAlignment="Left" Height="0" Margin="26,85,0,0" Grid.Row="1" VerticalAlignment="Top" Width="4" Grid.Column="3"/>
+        <Button Content="Clean_ALL" Click="Button_Click_1" Margin="97,421,168,10" Grid.Row="1" Grid.Column="3"/>
+        <Button Content="ADD" MaxWidth="70" Margin="193,421,24,0" Click="Button_Click" Height="32" VerticalAlignment="Top" Grid.Row="1" Grid.Column="3" />
+        <TextBox x:Name="StudentnameTextBox" Margin="141,62,41,354" Grid.Row="1" Grid.Column="3" />
+        <ListBox x:Name="StudentsurnameList" HorizontalAlignment="Left" Height="326" Margin="118,91,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="64"/>
+        <ListBox x:Name="StudentkyrsList" HorizontalAlignment="Left" Height="330" Margin="315,92,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="StudentprofList" HorizontalAlignment="Left" Height="326" Margin="206,91,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="85"/>
+        <Label Content="Ім'я" HorizontalAlignment="Left" Height="24" Margin="10,61,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="67"/>
+        <Label Content="Прізвище" HorizontalAlignment="Left" Height="24" Margin="118,61,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="64"/>
+        <Label Content="Курс" HorizontalAlignment="Left" Height="26" Margin="216,59,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Спеціальність" HorizontalAlignment="Left" Margin="315,59,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2" Width="85"/>
+        <Label Content="Ім'я" HorizontalAlignment="Left" Height="24" Margin="56,67,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="67" Grid.Column="3"/>
+        <Label Content="Пеглянути інформацію" Margin="167,17,66,420" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.023"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Додати інформацію" Margin="102,17,82,420" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Grid.Column="3">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.023"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Прізвище" HorizontalAlignment="Left" Height="24" Margin="43,155,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="64" RenderTransformOrigin="0.922,1.127" Grid.Column="3"/>
+        <Label Content="Курс" HorizontalAlignment="Left" Height="26" Margin="37,243,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="76" Grid.Column="3"/>
+        <Label Content="Спеціальність" HorizontalAlignment="Left" Margin="22,339,0,0" VerticalAlignment="Top" Grid.RowSpan="2" Width="85" Grid.Column="3"/>
+        <TextBox x:Name="StudentsurnameTextBox" Grid.Column="3" HorizontalAlignment="Left" Height="57" Margin="141,135,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="StudentkyrsTextBox" Grid.Column="3" HorizontalAlignment="Left" Height="50" Margin="141,327,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="StudentprofTextBox" Grid.Column="3" HorizontalAlignment="Left" Height="49" Margin="141,232,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
     </Grid>
 </Window>
